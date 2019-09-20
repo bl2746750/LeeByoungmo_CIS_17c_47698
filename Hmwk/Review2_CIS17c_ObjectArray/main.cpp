@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
    //Test out the Tables
    PlusTab tab1(rows,cols);
    PlusTab tab2(tab1);
+   //PlusTab tab2(rows,cols);
    PlusTab tab3=tab1+tab2;
    
    //Print the tables
