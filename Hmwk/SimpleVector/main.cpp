@@ -6,75 +6,79 @@
  */
 
 //System Libraries
-#include <iostream>
+#include <iostream>  //Input/Output Library
+#include "SimpleVector.h"
 using namespace std;
 
 //User Libraries
-#include "SimpleVector.h"
 
-//Global Constants
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
 
-//Function prototypes
-void fillVec(SimpleVector<float> &);
-void prntVec(SimpleVector<float> &,int);
+//Function Prototypes
+void fillVec(SimpleVector<int> &);
+void addVec(SimpleVector<int> &);
+void delVec(SimpleVector<int> &);
+void prntVec(SimpleVector<int> &,int);
 
-//Execution Begins Here
+//Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
-    int size=100;
-    SimpleVector<float> sv(size);
+    int size;
     
-    //Fill the Vector
+    //Read in the size
+    cout<<"What size vector to test?"<<endl;
+    cin>>size;
+    SimpleVector<int> sv(size);
+ 
+    //Initialize or input i.e. set variable values
     fillVec(sv);
     
-    //Print the Vector
+    //Display the outputs
     prntVec(sv,10);
     
-    //Copy the Vector
-    SimpleVector<float> copysv(sv);
+    //Add and subtract from the vector
+    addVec(sv);
     
-    //Print the Vector
-    prntVec(copysv,10);
-    
-    //push_back the Vector
-    sv.pushBack(50);
-    
-    //Print the Vector
+    //Display the outputs
     prntVec(sv,10);
     
-    //pop_back the Vector
-    sv.popBack();
+    //Add and subtract from the vector
+    delVec(sv);
     
-    //Print the Vector
+    //Display the outputs
     prntVec(sv,10);
-    
-    //push_front
-    sv.pushFront(50);
 
-    //Print the Vector
-    prntVec(sv,10);
-    
-    //pop_front
-    sv.popFront();
-
-    //Print the Vector
-    prntVec(sv,10);
-    
+    //Exit stage right or left!
     return 0;
 }
 
-void prntVec(SimpleVector<float> &sv,int perLine){
+void addVec(SimpleVector<int> &sv){
+    int add=sv.size()*0.1;
+    for(int i=1;i<=add;i++){
+        sv.push_front(i+add-1);
+        sv.push_back(i-add);
+    }
+}
+
+void delVec(SimpleVector<int> &sv){
+    int del=sv.size()*0.2;
+    for(int i=1;i<=del;i++){
+        sv.pop_front();
+        sv.pop_back();
+    }
+}
+
+void fillVec(SimpleVector<int> &sv){
+    for(int i=0;i<sv.size();i++){
+        sv[i]=i%10;
+    }
+}
+void prntVec(SimpleVector<int> &sv,int n){
     cout<<endl;
     for(int i=0;i<sv.size();i++){
         cout<<sv[i]<<" ";
-        if(i%perLine==(perLine-1))cout<<endl;
+        if(i%n==(n-1))cout<<endl;
     }
     cout<<endl;
 }
-
-void fillVec(SimpleVector<float> &sv){
-    for(int i=0;i<sv.size();i++){
-        sv[i]=rand()%90+10;
-    }
-}
-

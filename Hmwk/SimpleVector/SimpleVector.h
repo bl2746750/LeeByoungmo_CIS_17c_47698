@@ -52,17 +52,21 @@ public:
    // Overloaded [] operator declaration
    T &operator[](const int &);
    
-   //push_back
-   void pushBack(T);
-   
-   //pop_back
-   void popBack();
-   
-   //push_front
-   void pushFront(T);
-   
-   //pop_front
-   void popFront();
+   void push_front(T);
+   void push_back(T);
+   T    pop_front();
+   T    pop_back();
+//   //push_back
+//   void pushBack(T);
+//   
+//   //pop_back
+//   void popBack();
+//   
+//   //push_front
+//   void pushFront(T);
+//   
+//   //pop_front
+//   void popFront();
 };
 
 //***********************************************************
@@ -172,9 +176,110 @@ T &SimpleVector<T>::operator[](const int &sub)
    return aptr[sub];
 }
 
-//push_back
+////push_back
+//template <class T>
+//void SimpleVector<T>::pushBack(T pushed){
+//   // Copy to copySV temporarily
+//   SimpleVector<T> copySV(arraySize);
+//   for(int count = 0; count < arraySize; count++)
+//      *(copySV.aptr + count) = *(aptr + count);
+//   
+//   //delete the original array
+//   delete[] aptr;
+//   
+//   //increment arraysize
+//   arraySize ++;
+//    
+//   // Allocate memory for the array.
+//   aptr = new T [arraySize];
+//   if (aptr == 0)
+//      memError();
+//      
+//   // Copy the elements of copy's array.
+//   for(int count = 0; count < arraySize-1; count++)
+//      *(aptr + count) = *(copySV.aptr + count); 
+//
+//   *(aptr+arraySize-1)=pushed; 
+//}
+//
+////pop_back
+//template <class T>
+//void SimpleVector<T>::popBack(){
+//   // Copy to copySV temporarily
+//   SimpleVector<T> copySV(arraySize);
+//   for(int count = 0; count < arraySize; count++)
+//      *(copySV.aptr + count) = *(aptr + count);
+//   
+//   //delete the original array
+//   delete[] aptr;
+//   
+//   //decrement arraysize
+//   arraySize --;
+//    
+//   // Allocate memory for the array.
+//   aptr = new T [arraySize];
+//   if (aptr == 0)
+//      memError();
+//      
+//   // Copy the elements of copy's array.
+//   for(int count = 0; count < arraySize; count++)
+//      *(aptr + count) = *(copySV.aptr + count); 
+//
+//}
+//
+////push_front
+//template <class T>
+//void SimpleVector<T>::pushFront(T pushed){
+//   // Copy to copySV temporarily
+//   SimpleVector<T> copySV(arraySize);
+//   for(int count = 0; count < arraySize; count++)
+//      *(copySV.aptr + count) = *(aptr + count);
+//   
+//   //delete the original array
+//   delete[] aptr;
+//   
+//   //increment arraysize
+//   arraySize ++;
+//    
+//   // Allocate memory for the array.
+//   aptr = new T [arraySize];
+//   if (aptr == 0)
+//      memError();
+//      
+//   // Copy the elements of copy's array.
+//   *(aptr)=pushed;
+//   for(int count = 1; count < arraySize; count++)
+//      *(aptr + count) = *(copySV.aptr + count-1); 
+//
+//        
+//}
+//
+////pop_front
+//template <class T>
+//void SimpleVector<T>::popFront(){
+//   // Copy to copySV temporarily
+//   SimpleVector<T> copySV(arraySize);
+//   for(int count = 0; count < arraySize; count++)
+//      *(copySV.aptr + count) = *(aptr + count);
+//   
+//   //delete the original array
+//   delete[] aptr;
+//   
+//   //decrement arraysize
+//   arraySize --;
+//    
+//   // Allocate memory for the array.
+//   aptr = new T [arraySize];
+//   if (aptr == 0)
+//      memError();
+//      
+//   // Copy the elements of copy's array.
+//   for(int count = 0; count < arraySize; count++)
+//      *(aptr + count) = *(copySV.aptr + count+1); 
+//    
+//}
 template <class T>
-void SimpleVector<T>::pushBack(T pushed){
+void SimpleVector<T>::push_front(T val){
    // Copy to copySV temporarily
    SimpleVector<T> copySV(arraySize);
    for(int count = 0; count < arraySize; count++)
@@ -183,11 +288,38 @@ void SimpleVector<T>::pushBack(T pushed){
    //delete the original array
    delete[] aptr;
    
-   //increment arraysize
-   arraySize ++;
-    
    // Allocate memory for the array.
-   aptr = new T [arraySize];
+   aptr = new T [copySV.size()+1];
+   
+//   cout << "push_front ArraySize" << copySV.size()+1 << endl;
+//   cout << "push_front ArraySize" << arraySize << endl;
+   arraySize=copySV.size()+1;
+   if (aptr == 0)
+      memError();
+      
+   // Copy the elements of copy's array.
+   *(aptr)=val;
+   for(int count = 1; count < arraySize; count++)
+      *(aptr + count) = *(copySV.aptr + count-1); 
+   
+//   delete [] copySV;
+
+}
+
+template <class T>
+void SimpleVector<T>::push_back(T val){
+   // Copy to copySV temporarily
+   SimpleVector<T> copySV(arraySize);
+   for(int count = 0; count < arraySize; count++)
+      *(copySV.aptr + count) = *(aptr + count);
+   
+   //delete the original array
+   delete[] aptr;
+       
+   // Allocate memory for the array.
+   aptr = new T [copySV.size()+1];
+   arraySize=copySV.size()+1;
+   
    if (aptr == 0)
       memError();
       
@@ -195,83 +327,64 @@ void SimpleVector<T>::pushBack(T pushed){
    for(int count = 0; count < arraySize-1; count++)
       *(aptr + count) = *(copySV.aptr + count); 
 
-   *(aptr+arraySize-1)=pushed; 
+   *(aptr+arraySize-1)=val; 
+//   delete [] copySV;
 }
 
-//pop_back
 template <class T>
-void SimpleVector<T>::popBack(){
+T SimpleVector<T>::pop_front(){
+   T dummy;
    // Copy to copySV temporarily
    SimpleVector<T> copySV(arraySize);
    for(int count = 0; count < arraySize; count++)
       *(copySV.aptr + count) = *(aptr + count);
-   
+   dummy=copySV.getElementAt(0);
    //delete the original array
    delete[] aptr;
    
-   //decrement arraysize
-   arraySize --;
-    
    // Allocate memory for the array.
-   aptr = new T [arraySize];
+   aptr = new T [copySV.size()-1];
+   arraySize=copySV.size()-1;
+   if (aptr == 0)
+      memError();
+      
+   // Copy the elements of copy's array.
+   for(int count = 0; count < arraySize; count++)
+      *(aptr + count) = *(copySV.aptr + count+1);  
+   
+   
+//   delete [] copySV;
+   
+   return dummy;
+}
+
+template <class T>
+T SimpleVector<T>::pop_back(){
+    T dummy;
+   // Copy to copySV temporarily
+   SimpleVector<T> copySV(arraySize);
+      
+   for(int count = 0; count < arraySize; count++)
+      *(copySV.aptr + count) = *(aptr + count);
+   
+   dummy=copySV.getElementAt(arraySize-1);
+   //delete the original array
+   delete[] aptr;
+   
+   // Allocate memory for the array.
+   aptr = new T [copySV.size()-1];
+   
+   arraySize=copySV.size()-1;
+   
    if (aptr == 0)
       memError();
       
    // Copy the elements of copy's array.
    for(int count = 0; count < arraySize; count++)
       *(aptr + count) = *(copySV.aptr + count); 
-
-}
-
-//push_front
-template <class T>
-void SimpleVector<T>::pushFront(T pushed){
-   // Copy to copySV temporarily
-   SimpleVector<T> copySV(arraySize);
-   for(int count = 0; count < arraySize; count++)
-      *(copySV.aptr + count) = *(aptr + count);
    
-   //delete the original array
-   delete[] aptr;
+//   delete [] copySV;
    
-   //increment arraysize
-   arraySize ++;
-    
-   // Allocate memory for the array.
-   aptr = new T [arraySize];
-   if (aptr == 0)
-      memError();
-      
-   // Copy the elements of copy's array.
-   *(aptr)=pushed;
-   for(int count = 1; count < arraySize; count++)
-      *(aptr + count) = *(copySV.aptr + count-1); 
-
-        
-}
-
-//pop_front
-template <class T>
-void SimpleVector<T>::popFront(){
-   // Copy to copySV temporarily
-   SimpleVector<T> copySV(arraySize);
-   for(int count = 0; count < arraySize; count++)
-      *(copySV.aptr + count) = *(aptr + count);
-   
-   //delete the original array
-   delete[] aptr;
-   
-   //decrement arraysize
-   arraySize --;
-    
-   // Allocate memory for the array.
-   aptr = new T [arraySize];
-   if (aptr == 0)
-      memError();
-      
-   // Copy the elements of copy's array.
-   for(int count = 0; count < arraySize; count++)
-      *(aptr + count) = *(copySV.aptr + count+1); 
-    
+   return dummy;
 }
 #endif
