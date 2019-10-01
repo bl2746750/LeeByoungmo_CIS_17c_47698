@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         copysv.pop_back();   //pop_back() five times
         copysv.pop_front();  //pop_front() five times
     }
-//    
+    cout << "After five pop_back() and five pop_front():" << endl;  
     prntVec(copysv,10);      //print the Vector
     cout << "size()="<<copysv.size() << endl;
 //    
@@ -55,10 +55,12 @@ int main(int argc, char** argv) {
 //    cout << "size()="<<copysv.size() << endl;
     for(int i=0;i<10;i++){
         
+        copysv.push_back(i); //push_back() 0~9
         copysv.push_front(i);//push_front() 0~9
-        copysv.push_back(i); //push_back() 0~9 
+         
     }
     
+    cout << "After ten push_back() and ten push_front():" << endl;
     prntVec(copysv,10);      //print the Vector
     cout << "size()="<<copysv.size() << endl;
     copysv.prntLst();
