@@ -28,13 +28,13 @@ private:
         T data;
         Link* ptr;
     };
-   Link* list;
+   Link* head;       //First list doesn't have a value like textbook(Gaddis).
    void memError();  // Handles memory allocation errors
    void subError();  // Handles subscripts out of range
 
 public:
    // Default constructor
-   SimpleVector(){list->ptr=nullptr;}
+   SimpleVector(){head=nullptr;}
       
    // Constructor declaration
    SimpleVector(int);
@@ -70,55 +70,80 @@ public:
 //***********************************************************
 template <class T>
 int SimpleVector<T>::size() const{
-    Link *front=list;
-    int cnt=0;
-    do{
-        cnt++;
-        front=front->ptr;
-    }while(front);
-//    cout << "size()=" << cnt-1 << endl;
-    return cnt;    
+    Link *nodePtr, *next;
+    if(!head){
+//        cout << "!head" << endl;
+        return 0;
+    }
+    else{
+        nodePtr=head;
+
+        int cnt=1;
+        do{
+            cnt++;
+            nodePtr=nodePtr->ptr;
+        }while(nodePtr->ptr);
+//        cout << "size()=" << cnt << endl;
+        return cnt;  
+    }
 }
 
 template <class T>
 void SimpleVector<T>::pop_front(){
-    if(!list) return;
-    Link *front=list->ptr;
-    delete list;
-    list=front;
+    if(!head) return;
+    else{
+        Link* front=head;
+        front=front->ptr;
+        Link *second;
+        second=front->ptr;
+        delete front;
+        head->ptr=second;
+    }
 }
 template <class T>
 void SimpleVector<T>::pop_back(){
-    if(!list)return;
-    Link *front=list;
-    Link *back;
-    
+    if(!head)return;
+    Link *nodePtr=head,*end;
+        
     do{
-        back=front;
-        front=front->ptr;
-    }while(front->ptr);
-    front=0;
-    back->ptr=0;
+        end=nodePtr;
+        nodePtr=nodePtr->ptr;
+    }while(nodePtr->ptr);
+    delete nodePtr;
+    end->ptr=0;
 }
 template <class T>
 
 void SimpleVector<T>::push_front(T val){
-//    cout << "push_front(T val)" << endl;   
-//    cout << "list=" << this->list << endl;
-//    cout << "list->data=" << this->list->data << endl;
-//    cout << "list->ptr=" << this->list->ptr << endl;
+//    cout << "0push_front(T val)" << endl;   
+//    cout << "list=" << head << endl;
+//    cout << "list->data=" << head->data << endl;
+//    cout << "list->ptr=" << head->ptr << endl;
+    Link* newNode=new Link;
+    newNode->data=val;
     
-    if(!list){
-        list=new Link;
-        list->data=val;
-        list->ptr=nullptr;
+    if(!head){
+//        cout << endl << "1" << endl;
+//        head=new Link;
+//        head=head->ptr;
+        head=newNode;
+        newNode->ptr=nullptr;
+//        cout << "1push_front(T val)" << endl;   
+//        cout << "head=" << head << endl;
+//        cout << "list->data=" << head->data << endl;
+//        cout << "list->ptr=" << head->ptr << endl;
+//        cout << "size()=" << size() << endl;
     }
     else{
-        Link * secNode=new Link;
-        secNode=list;
-        secNode=secNode->ptr;
-        list->data=val;
-        list->ptr=secNode;
+//        cout << endl << "2" << endl;
+        Link* secNode=head;
+        newNode->ptr=secNode;
+        head=newNode;
+//        cout << "2push_front(T val)" << endl;   
+//        cout << "list=" << head << endl;
+//        cout << "list->data=" << head->data << endl;
+//        cout << "list->ptr=" << head->ptr << endl;
+//        cout << "size()=" << size() << endl;
     }
 //    Link *front=new Link;
 //    front->data=val;
@@ -128,43 +153,42 @@ void SimpleVector<T>::push_front(T val){
 
 template <class T>
 void SimpleVector<T>::push_back(T val){
-    cout << "push_back val=" << val << endl;
-    if(!list) {
-        list=new Link;
-        list->data=val;
-        list->ptr=0;
+//    cout << "push_back val=" << val << endl;
+    Link* newNode=new Link;
+    newNode->data=val;
+    newNode->ptr=0;
+        
+    if(!head) {
+//        cout << "!head"  << endl;
+        head=newNode;
     } else{
-        Link *back=new Link;
-        Link *front=list;
-        Link *end;
-        back->data=val;
-        back->ptr=0;
-        while(front){
-            end=front;
-            front=front->ptr;
-        }
-        end->ptr=back;    
+//        cout << "head=" << head->data << endl;
+        Link *end=head;
+        while(end->ptr){end=end->ptr;}
+        end->ptr=newNode;    
+//        cout << "end=" << end->data << endl;
     }
     
-    cout << "size()=" << size() << endl;
+//    cout << "size()=" << size() << endl;
 }
 
 template <class T>
 void SimpleVector<T>::prntLst(){
-    Link *front;
+    Link *nodePtr;
 //    front=new Link;
-    front=list;
+    nodePtr=head;
     int cnt=0;
 //    front->data=list->data;
     cout<<endl;
-    while(front){
+    while(nodePtr){
         cout <<"["<<cnt<<"]";
-        cout<<front->data<<endl;
-        front=front->ptr;
+        
+        cout<<nodePtr->data<<endl;
+        nodePtr=nodePtr->ptr;
         cnt++;
-    };
+    }
     cout<<endl;
-    delete front;  //problem: 0 come out at last
+    delete nodePtr;  
 //    int perLine=10;
 //    cout<<endl;
 //    
@@ -180,27 +204,28 @@ void SimpleVector<T>::prntLst(){
 }
 template <class T>
 void SimpleVector<T>::dstryLst(){
-    Link *nextNode;
+    Link *nextNode=head;
     
-    while(list){
-        nextNode=list->ptr;
-        delete list;
-        list=nextNode;
+    while(nextNode){
+        nextNode=head->ptr;
+        delete head;
+        head=nextNode;
     }
+    
     
 }
 template <class T>
 SimpleVector<T>::SimpleVector(int s)
 {
     //cout << "size()="<<size() << endl;
-    //list=new Link;
+    head=0;
     //cout << "size()="<<size() << endl;
     int cnt=s;
 //    cout << "SimpleVector(int s)" << cnt << endl;
     
     do{
         push_front(cnt--);
-//        push_back(cnt--);
+//        push_back(--cnt);
 //        cout << "SimpleVector(int s)" << cnt << " " << list->data << endl;
     }while(cnt);
     
@@ -219,18 +244,21 @@ SimpleVector<T>::SimpleVector(int s)
 template <class T>
 SimpleVector<T>::SimpleVector(const SimpleVector &obj)
 {
-    list=new Link;
-    Link* next=obj.list;
-    list->data=obj.list->data;
+    head=0;
+//    cout << "test, head=" << head << endl;
+    Link* nodePtr=obj.head;
+    
 //    cout << "list = " << list << " obj.list=" << obj.list << endl;
 //    cout << "list->data=" << list->data << " obj.list->data=" << obj.list->data << endl;
 //    cout << "list->ptr=" << list->ptr << " obj.list->ptr=" << obj.list->ptr << endl;
 //    cout << "size()=" << size() << " obj.size()=" << obj.size() << endl;
-    
+//    cout << "orig="<<orig<<endl;
 //    cout << "list[0]=" << list->data << endl;
-    while(next->ptr){
-        next=next->ptr;
-        push_back(next->data);
+    while(nodePtr){
+        
+//        cout << "nodePtr->data="<<nodePtr->data<<endl;
+        push_back(nodePtr->data);
+        nodePtr=nodePtr->ptr;
         
     }
 }
@@ -244,20 +272,20 @@ SimpleVector<T>::~SimpleVector()
 {
     Link *nextNode;
     Link *nodePtr;
-    int cnt=0;
-    nodePtr=list;
+//    int cnt=0;
+    nodePtr=head;
 //    while(list){
 //        cout << cnt << list->data << endl;
 //        list=list->ptr;
 //        cnt++;
 //    }
 //    cout << cnt << endl;
-    while(nodePtr!=nullptr){
+    while(nodePtr){
         nextNode=nodePtr->ptr;
         delete nodePtr;
         nodePtr=nextNode;
 //        cout << cnt << endl;
-        cnt++;
+//        cnt++;
         
     }
     
@@ -300,7 +328,7 @@ T SimpleVector<T>::getElementAt(int sub)
 {
     Link* find;
     int cnt=sub;
-    find=list;
+    find=head;
     while(cnt){
         find=find->ptr;
         cnt--;
@@ -322,9 +350,8 @@ T &SimpleVector<T>::operator[](const int &sub)
         exit(0);
     }
     int cnt=sub;
-    Link* nodePtr;
+    Link* nodePtr = head;
     
-    nodePtr=list;
     while(cnt){
         nodePtr=nodePtr->ptr;
         cnt--;
