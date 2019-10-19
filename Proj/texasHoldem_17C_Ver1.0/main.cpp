@@ -1,23 +1,15 @@
-/* 
+/*
  * File:   main.cpp
  * Author: Byoung Mo Lee
  * Created on May 17, 2019 00:29 AM
  * Purpose: Texas Holdem
- * 
+ *
  */
 
 //System Libraries Here
-#include <iostream>//I/O Library
-#include <cstdlib>   //Srand
-#include <ctime>     //Time to set random number seed
-#include <cmath>     //Math Library
-#include <fstream> //file I/O Library 
-#include <cctype>  //ch+10
-#include <string>  //string library
-#include <clocale> //print card library
-#include "Card.h"
 
-
+#include <iostream>
+#include <iterator>
 #include "Dealer.h"
 
 
@@ -34,55 +26,38 @@ using namespace std;
 
 //Execution begins here
 
-void showNumPlayers(const Dealer *activity);
+
 int main(int argc, char** argv) {
-    int n=5;
-    int exit=1;
-    cout << "number of players: ";
-    cin >> n;
-    try{
-        Dealer a(n);
+    Dealer game(3);
+//    game.Dealer::setCards();
+//    for(int i=0;i<52;i++){
+//        cout << game.getDeck()[i]->getPict();
+//    }
+//    cout << endl;
+//    game.shuffle();
+//    for(int i=0;i<52;i++){
+//        cout << game.getDeck()[i]->getPict();
+//    }
+//    cout << endl << endl;
+//
+//    game.Preflop();
     
+//    cout << game.getPlayers()[0].getMyCards().front().getPict() << endl;
+//    cout << game.getPlayers()[0].getMyCards().back().getPict() << endl;
     
-        while(exit){
-
-            a.shuffle();
-            //a.display();
-            a.dealPreflop();
-            //a.display();
-            a.dealFlop();
-            //a.display();
-            a.dealTurn();
-            //a.display();
-            a.dealRiver();
-            a.display();
-            showNumPlayers(&a);
-            //a.getPlayers()[0].updateMyHands(a.getPlayers()[0]);
-            //cout << a.getPlayers()[0].getHands() << endl;
-            //cout << a.getPlayers()[0].getPoints() << endl;
-            for(int i=0;i<n;i++){
-                a.getPlayers()[i].resetMyCards();
-            }
-
-            
-
-
-
-
-
-
-            cout << "Press 1 to continue or press 0 to exit!!!" << endl;
-            cin >> exit;
-        }
-    }
-    catch (Dealer::NegativeNumber){
-    cout << "Error: number should be positive.\n";
-    }
+   
     
+//    cout << game.getPlayers()[0].getMyCards().back().getPict() << endl;
+//            
+//    list<Card*>::iterator it=game.getPlayers()[0].getMyCards().begin();
+//    cout << *it->getPict() << endl;
+//    Card* deck[52];
+//    for(int i=0;i<52;i++){
+//        deck[i]=new Card(i);
+//    }
+//    list<Card> test;
+//    Card card=*deck[3];
+//    test.push_back(card);
+//    cout << test.back().getPict() << endl;
     return 0;
-}
-
-void showNumPlayers(const Dealer *activity){
-    int num=activity->getNumPlayers();
-    cout << num << " players are playing now!" << endl;
 }

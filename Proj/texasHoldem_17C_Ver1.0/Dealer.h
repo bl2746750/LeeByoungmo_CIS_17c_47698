@@ -9,7 +9,6 @@
 #define DEALER_H
 
 #include <string>
-#include "Card.h"
 #include "Player.h"
 
 
@@ -19,40 +18,49 @@ class Dealer{
 private:
     int potAmount;
     int initialContributeAmount;
-    int round;
+    int nRound;   //static
     int numPlayers;
+    int bigBlind;
+    int smallBlind;
     Player* players;
-    Card* cards;
-    Card* myCards;
+    Card* deck[52];
     void DeckOfCards();
     
     
 public:
-    class NegativeNumber {};
-    Dealer();
+    //class NegativeNumber {};
+    Dealer(int num);
     ~Dealer() {}
-    Dealer(int n);
     void shuffle();
-    void setPlayers(int n);
-    void setCards(Card* c) {cards=new Card [52]; cards=c;}
-    void setMyCards(Card* mc) {myCards=mc;}
-    void setRound(int r) {round=r;}
-    void initiateRound();
-    int decideWinner();
-    void completeRound();
-    void dealPreflop();
-    void dealFlop();
-    void dealTurn();
-    void dealRiver();
-    int getPotAmount() const {return potAmount;}
-    int getInitContAmount() const {return initialContributeAmount;}
-    int getRound() const {return round;}
+    void setPlayers(int num);
+    void setCards() {this->DeckOfCards();}
+    void setBlind();
+    int getBigBlind(){return this->bigBlind;}
+    int getSmallBlind(){return this->smallBlind;}
+    //void setMyCards(Card* mc) {myCards=mc;}
+    void setRound() {this->nRound=0;}
+    //void initiateRound();
+    //int decideWinner();
+    //void completeRound();
+    void preflop();
+    void flop();
+    void turn();
+    void river();
+    //int getPotAmount() const {return potAmount;}
+    //int getInitContAmount() const {return initialContributeAmount;}
+    int getRound() const {return this->nRound;}
     Player* getPlayers() const {return players;}
-    Card* getCards() const {return cards;}
+    Card** getDeck() {return this->deck;}
     int getNumPlayers() const {return numPlayers;}
-    void displayCards(Card* cards);
-    void display();
-    
+    //void displayCards(Card* cards);
+    void displayPlayersInfo(int num);
+    int bettingPrompt1();
+    void setIniCont() {this->initialContributeAmount=50;}
+    void setPotAmount() {this->potAmount=0;}
+    int bettingPrompt2(int num, int amount);
+    int bettingPrompt3(int num, int amount);
+    int getPotAmount() {return this->potAmount;}
+    int getNumAct();
 };
 
 //int Dealer::round=0;

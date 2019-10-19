@@ -1,10 +1,7 @@
-build/Debug/Cygwin-Windows/Dealer.o: Dealer.cpp Dealer.h Card.h Player.h \
- Hands.h
+build/Debug/Cygwin-Windows/Dealer.o: Dealer.cpp Dealer.h Player.h Card.h
 
 Dealer.h:
 
-Card.h:
-
 Player.h:
 
-Hands.h:
+Card.h:

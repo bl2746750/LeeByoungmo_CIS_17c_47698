@@ -11,46 +11,36 @@
 
 #include <iostream>
 #include <string>
+#include <list>
 #include "Card.h"
-#include "Hands.h"
+
 
 using namespace std;
 
-class Player : public Hands  {
-protected:
+class Player {
+private:
     string name;
     int balance;
-    int order;      //if(order==0) Big blind, if(order==1) small blind
-    int status;
-    Card* myCards;
-    Card* myFiveCards;
-    int hands;
-    int myPoints;
+    int inThePot;
+    bool active;
+    list<Card> myCards;
     
 public:
-    Player() {setPlayer("",10000,0,1);myCards=new Card[7];}
+    Player();
     ~Player() {}
-    void setPlayer(string n,int b, int o, int s) {name=n;balance=b;order=o;status=s;}
-    void setMyCard(Card* mC) {myCards=new Card[7];myCards=mC;}
-    void setName(string n) {name=n;}
-    void setBalance(int b) {balance=b;}
-    void setOrder(int o) {order=o;}
-    void setStatus(int s) {status=s;}
-    string getName() const {return name;}
-    int getBalance() const {return balance;}
-    int getNumCards() const;
-    void updateMyHands();
-    int getMyHands() const;
-    Card* getMyFiveCards() const;
-    int getMyPoints() const;
-    int getOrder() const {return order;}
-    Card* getMycards() const {return myCards;}
-    int getStatus() const {return status;}
-    void putMoneyToPot(int m) {balance-=m;}
-    void takeMoneyFromPot(int m) {balance+=m;}
-    void resetMyCards() {delete [] myCards;myCards= new Card [7];}
-    void addCards(Card *c, int n); //mC=players.myCards, c=decked Cards, n=number of addition
-    void displayMyFiveCards();
+    void setPlayerName(string name) {this->name=name;}
+    void setPlayerBal() {this->balance=1000;}
+    void addMyCards(Card card);
+    void setPlayerAct() {this->active=1;}
+    string getName() const {return this->name;}
+    int getBalance() const {return this->balance;}
+    int getPlayerAct() {return this->active;}
+    list<Card> getMyCards() {return this->myCards;}
+    void bet(int amount) {this->balance -=amount;this->inThePot +=amount;}
+    void setPlayerInact() {this->active=0;}
+    void setInThePot() {this->inThePot=0;}
+    int putInThePot() {return this->inThePot;}
+    bool getActStatus() {return this->active;}
     
 };
 
