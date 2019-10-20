@@ -1,0 +1,200 @@
+.TH "Dealer" 3 "Sun Oct 20 2019" "texasHoldem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Dealer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Dealer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDealer\fP (int num)"
+.br
+.ti -1c
+.RI "\fB~Dealer\fP ()"
+.br
+.ti -1c
+.RI "void \fBshuffle\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPlayers\fP (int num)"
+.br
+.ti -1c
+.RI "void \fBsetCards\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBlind\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetBigBlind\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetSmallBlind\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRound\fP ()"
+.br
+.ti -1c
+.RI "void \fBpreflop\fP ()"
+.br
+.ti -1c
+.RI "void \fBflop\fP ()"
+.br
+.ti -1c
+.RI "void \fBturn\fP ()"
+.br
+.ti -1c
+.RI "void \fBriver\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetRound\fP () const"
+.br
+.ti -1c
+.RI "\fBHands\fP * \fBgetPlayers\fP () const"
+.br
+.ti -1c
+.RI "\fBCard\fP ** \fBgetDeck\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNumPlayers\fP () const"
+.br
+.ti -1c
+.RI "void \fBdisplayPlayersInfo\fP (int num)"
+.br
+.ti -1c
+.RI "int \fBbettingPrompt1\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIniCont\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPotAmount\fP ()"
+.br
+.ti -1c
+.RI "int \fBbettingPrompt2\fP (int num, int amount)"
+.br
+.ti -1c
+.RI "int \fBbettingPrompt3\fP (int num, int amount)"
+.br
+.ti -1c
+.RI "int \fBgetPotAmount\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNumAct\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file Dealer\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Dealer::Dealer (int num)"
+
+.PP
+Definition at line 14 of file Dealer\&.cpp\&.
+.SS "Dealer::~Dealer ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file Dealer\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int Dealer::bettingPrompt1 ()"
+
+.PP
+Definition at line 218 of file Dealer\&.cpp\&.
+.SS "int Dealer::bettingPrompt2 (int num, int amount)"
+
+.PP
+Definition at line 273 of file Dealer\&.cpp\&.
+.SS "int Dealer::bettingPrompt3 (int num, int amount)"
+
+.PP
+Definition at line 315 of file Dealer\&.cpp\&.
+.SS "void Dealer::displayPlayersInfo (int num)"
+
+.PP
+Definition at line 128 of file Dealer\&.cpp\&.
+.SS "void Dealer::flop ()"
+
+.PP
+Definition at line 179 of file Dealer\&.cpp\&.
+.SS "int Dealer::getBigBlind ()\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file Dealer\&.h\&.
+.SS "\fBCard\fP** Dealer::getDeck ()\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file Dealer\&.h\&.
+.SS "int Dealer::getNumAct ()"
+
+.PP
+Definition at line 366 of file Dealer\&.cpp\&.
+.SS "int Dealer::getNumPlayers () const\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file Dealer\&.h\&.
+.SS "\fBHands\fP* Dealer::getPlayers () const\fC [inline]\fP"
+
+.PP
+Definition at line 52 of file Dealer\&.h\&.
+.SS "int Dealer::getPotAmount ()\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file Dealer\&.h\&.
+.SS "int Dealer::getRound () const\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file Dealer\&.h\&.
+.SS "int Dealer::getSmallBlind ()\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file Dealer\&.h\&.
+.SS "void Dealer::preflop ()"
+
+.PP
+Definition at line 162 of file Dealer\&.cpp\&.
+.SS "void Dealer::river ()"
+
+.PP
+Definition at line 205 of file Dealer\&.cpp\&.
+.SS "void Dealer::setBlind ()"
+
+.PP
+Definition at line 122 of file Dealer\&.cpp\&.
+.SS "void Dealer::setCards ()\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Dealer\&.h\&.
+.SS "void Dealer::setIniCont ()\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file Dealer\&.h\&.
+.SS "void Dealer::setPlayers (int num)"
+
+.PP
+Definition at line 113 of file Dealer\&.cpp\&.
+.SS "void Dealer::setPotAmount ()\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file Dealer\&.h\&.
+.SS "void Dealer::setRound ()\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file Dealer\&.h\&.
+.SS "void Dealer::shuffle ()"
+
+.PP
+Definition at line 148 of file Dealer\&.cpp\&.
+.SS "void Dealer::turn ()"
+
+.PP
+Definition at line 192 of file Dealer\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for texasHoldem from the source code\&.

@@ -1,0 +1,328 @@
+\hypertarget{class_dealer}{}\doxysection{Dealer Class Reference}
+\label{class_dealer}\index{Dealer@{Dealer}}
+
+
+{\ttfamily \#include $<$Dealer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dealer_a6a28be2beee1c559e202fb5b84b069cc}{Dealer}} (int num)
+\item 
+\mbox{\hyperlink{class_dealer_a8320886a9414610ab1de1bd03de0e216}{$\sim$\+Dealer}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_af7745ad18bca2338902d799a48dbceaa}{shuffle}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_ae51e030cc5764054919dcd617137c666}{set\+Players}} (int num)
+\item 
+void \mbox{\hyperlink{class_dealer_af667f16ab5497049b658e4cc2292b54f}{set\+Cards}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_a927adeec90b346f9f1f95d576d2f93a1}{set\+Blind}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_adff52a7dfccbf3a54386d643c597f2f3}{get\+Big\+Blind}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_a7d2357e4cc841d02326ae907cb58feee}{get\+Small\+Blind}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_ab787429e742bd5912877cfd819bd4836}{set\+Round}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_a5e7bfb3b1f07b8467c35a4c24c83a3ef}{preflop}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_abe884b0554633cedbe274ea984d33698}{flop}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_ad6c6cb0cd29eca7c9214abe03b2847b7}{turn}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_acf739a53c9aca1923170593e7690d6cc}{river}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_a28db7d73628ba96519c9d662aa33322e}{get\+Round}} () const
+\item 
+\mbox{\hyperlink{class_hands}{Hands}} $\ast$ \mbox{\hyperlink{class_dealer_a186f9e63cd1afbcce64769eb0a306e0e}{get\+Players}} () const
+\item 
+\mbox{\hyperlink{class_card}{Card}} $\ast$$\ast$ \mbox{\hyperlink{class_dealer_a4b61ef775b6125cbbc01811b822025ec}{get\+Deck}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_a384d6b68a1fe037a301cc595ec066358}{get\+Num\+Players}} () const
+\item 
+void \mbox{\hyperlink{class_dealer_a1bebb91ee3cd24a7d43c406bd5309507}{display\+Players\+Info}} (int num)
+\item 
+int \mbox{\hyperlink{class_dealer_ad646a4c678721411e634d167341ed54f}{betting\+Prompt1}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_a01d2345dc65f403747713f3626f47320}{set\+Ini\+Cont}} ()
+\item 
+void \mbox{\hyperlink{class_dealer_abdd50179bc4e5bcee2c5c898783cb928}{set\+Pot\+Amount}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_a49dd8dafec4d8590d3a5a7804c71e8c3}{betting\+Prompt2}} (int num, int amount)
+\item 
+int \mbox{\hyperlink{class_dealer_a8246614f999d4eb926dae7330080d3b3}{betting\+Prompt3}} (int num, int amount)
+\item 
+int \mbox{\hyperlink{class_dealer_ae891e1f75cd054bf20c9c0f1743879f4}{get\+Pot\+Amount}} ()
+\item 
+int \mbox{\hyperlink{class_dealer_a7bdd711a816ae8820c6ef42cd328612c}{get\+Num\+Act}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file Dealer.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dealer_a6a28be2beee1c559e202fb5b84b069cc}\label{class_dealer_a6a28be2beee1c559e202fb5b84b069cc}} 
+\index{Dealer@{Dealer}!Dealer@{Dealer}}
+\index{Dealer@{Dealer}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{Dealer()}{Dealer()}}
+{\footnotesize\ttfamily Dealer\+::\+Dealer (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a8320886a9414610ab1de1bd03de0e216}\label{class_dealer_a8320886a9414610ab1de1bd03de0e216}} 
+\index{Dealer@{Dealer}!````~Dealer@{$\sim$Dealer}}
+\index{````~Dealer@{$\sim$Dealer}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Dealer()}{~Dealer()}}
+{\footnotesize\ttfamily Dealer\+::$\sim$\+Dealer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file Dealer.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dealer_ad646a4c678721411e634d167341ed54f}\label{class_dealer_ad646a4c678721411e634d167341ed54f}} 
+\index{Dealer@{Dealer}!bettingPrompt1@{bettingPrompt1}}
+\index{bettingPrompt1@{bettingPrompt1}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{bettingPrompt1()}{bettingPrompt1()}}
+{\footnotesize\ttfamily int Dealer\+::betting\+Prompt1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a49dd8dafec4d8590d3a5a7804c71e8c3}\label{class_dealer_a49dd8dafec4d8590d3a5a7804c71e8c3}} 
+\index{Dealer@{Dealer}!bettingPrompt2@{bettingPrompt2}}
+\index{bettingPrompt2@{bettingPrompt2}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{bettingPrompt2()}{bettingPrompt2()}}
+{\footnotesize\ttfamily int Dealer\+::betting\+Prompt2 (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Definition at line 273 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a8246614f999d4eb926dae7330080d3b3}\label{class_dealer_a8246614f999d4eb926dae7330080d3b3}} 
+\index{Dealer@{Dealer}!bettingPrompt3@{bettingPrompt3}}
+\index{bettingPrompt3@{bettingPrompt3}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{bettingPrompt3()}{bettingPrompt3()}}
+{\footnotesize\ttfamily int Dealer\+::betting\+Prompt3 (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Definition at line 315 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a1bebb91ee3cd24a7d43c406bd5309507}\label{class_dealer_a1bebb91ee3cd24a7d43c406bd5309507}} 
+\index{Dealer@{Dealer}!displayPlayersInfo@{displayPlayersInfo}}
+\index{displayPlayersInfo@{displayPlayersInfo}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{displayPlayersInfo()}{displayPlayersInfo()}}
+{\footnotesize\ttfamily void Dealer\+::display\+Players\+Info (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_abe884b0554633cedbe274ea984d33698}\label{class_dealer_abe884b0554633cedbe274ea984d33698}} 
+\index{Dealer@{Dealer}!flop@{flop}}
+\index{flop@{flop}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{flop()}{flop()}}
+{\footnotesize\ttfamily void Dealer\+::flop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 179 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_adff52a7dfccbf3a54386d643c597f2f3}\label{class_dealer_adff52a7dfccbf3a54386d643c597f2f3}} 
+\index{Dealer@{Dealer}!getBigBlind@{getBigBlind}}
+\index{getBigBlind@{getBigBlind}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getBigBlind()}{getBigBlind()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Big\+Blind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a4b61ef775b6125cbbc01811b822025ec}\label{class_dealer_a4b61ef775b6125cbbc01811b822025ec}} 
+\index{Dealer@{Dealer}!getDeck@{getDeck}}
+\index{getDeck@{getDeck}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getDeck()}{getDeck()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}}$\ast$$\ast$ Dealer\+::get\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a7bdd711a816ae8820c6ef42cd328612c}\label{class_dealer_a7bdd711a816ae8820c6ef42cd328612c}} 
+\index{Dealer@{Dealer}!getNumAct@{getNumAct}}
+\index{getNumAct@{getNumAct}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getNumAct()}{getNumAct()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Num\+Act (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a384d6b68a1fe037a301cc595ec066358}\label{class_dealer_a384d6b68a1fe037a301cc595ec066358}} 
+\index{Dealer@{Dealer}!getNumPlayers@{getNumPlayers}}
+\index{getNumPlayers@{getNumPlayers}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getNumPlayers()}{getNumPlayers()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Num\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 54 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a186f9e63cd1afbcce64769eb0a306e0e}\label{class_dealer_a186f9e63cd1afbcce64769eb0a306e0e}} 
+\index{Dealer@{Dealer}!getPlayers@{getPlayers}}
+\index{getPlayers@{getPlayers}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getPlayers()}{getPlayers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hands}{Hands}}$\ast$ Dealer\+::get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_ae891e1f75cd054bf20c9c0f1743879f4}\label{class_dealer_ae891e1f75cd054bf20c9c0f1743879f4}} 
+\index{Dealer@{Dealer}!getPotAmount@{getPotAmount}}
+\index{getPotAmount@{getPotAmount}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getPotAmount()}{getPotAmount()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Pot\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a28db7d73628ba96519c9d662aa33322e}\label{class_dealer_a28db7d73628ba96519c9d662aa33322e}} 
+\index{Dealer@{Dealer}!getRound@{getRound}}
+\index{getRound@{getRound}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getRound()}{getRound()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a7d2357e4cc841d02326ae907cb58feee}\label{class_dealer_a7d2357e4cc841d02326ae907cb58feee}} 
+\index{Dealer@{Dealer}!getSmallBlind@{getSmallBlind}}
+\index{getSmallBlind@{getSmallBlind}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{getSmallBlind()}{getSmallBlind()}}
+{\footnotesize\ttfamily int Dealer\+::get\+Small\+Blind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a5e7bfb3b1f07b8467c35a4c24c83a3ef}\label{class_dealer_a5e7bfb3b1f07b8467c35a4c24c83a3ef}} 
+\index{Dealer@{Dealer}!preflop@{preflop}}
+\index{preflop@{preflop}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{preflop()}{preflop()}}
+{\footnotesize\ttfamily void Dealer\+::preflop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 162 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_acf739a53c9aca1923170593e7690d6cc}\label{class_dealer_acf739a53c9aca1923170593e7690d6cc}} 
+\index{Dealer@{Dealer}!river@{river}}
+\index{river@{river}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{river()}{river()}}
+{\footnotesize\ttfamily void Dealer\+::river (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_a927adeec90b346f9f1f95d576d2f93a1}\label{class_dealer_a927adeec90b346f9f1f95d576d2f93a1}} 
+\index{Dealer@{Dealer}!setBlind@{setBlind}}
+\index{setBlind@{setBlind}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setBlind()}{setBlind()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Blind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_af667f16ab5497049b658e4cc2292b54f}\label{class_dealer_af667f16ab5497049b658e4cc2292b54f}} 
+\index{Dealer@{Dealer}!setCards@{setCards}}
+\index{setCards@{setCards}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setCards()}{setCards()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_a01d2345dc65f403747713f3626f47320}\label{class_dealer_a01d2345dc65f403747713f3626f47320}} 
+\index{Dealer@{Dealer}!setIniCont@{setIniCont}}
+\index{setIniCont@{setIniCont}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setIniCont()}{setIniCont()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Ini\+Cont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_ae51e030cc5764054919dcd617137c666}\label{class_dealer_ae51e030cc5764054919dcd617137c666}} 
+\index{Dealer@{Dealer}!setPlayers@{setPlayers}}
+\index{setPlayers@{setPlayers}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setPlayers()}{setPlayers()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Players (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_abdd50179bc4e5bcee2c5c898783cb928}\label{class_dealer_abdd50179bc4e5bcee2c5c898783cb928}} 
+\index{Dealer@{Dealer}!setPotAmount@{setPotAmount}}
+\index{setPotAmount@{setPotAmount}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setPotAmount()}{setPotAmount()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Pot\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 59 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_ab787429e742bd5912877cfd819bd4836}\label{class_dealer_ab787429e742bd5912877cfd819bd4836}} 
+\index{Dealer@{Dealer}!setRound@{setRound}}
+\index{setRound@{setRound}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{setRound()}{setRound()}}
+{\footnotesize\ttfamily void Dealer\+::set\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file Dealer.\+h.
+
+\mbox{\Hypertarget{class_dealer_af7745ad18bca2338902d799a48dbceaa}\label{class_dealer_af7745ad18bca2338902d799a48dbceaa}} 
+\index{Dealer@{Dealer}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void Dealer\+::shuffle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 148 of file Dealer.\+cpp.
+
+\mbox{\Hypertarget{class_dealer_ad6c6cb0cd29eca7c9214abe03b2847b7}\label{class_dealer_ad6c6cb0cd29eca7c9214abe03b2847b7}} 
+\index{Dealer@{Dealer}!turn@{turn}}
+\index{turn@{turn}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily void Dealer\+::turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file Dealer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dealer_8h}{Dealer.\+h}}\item 
+\mbox{\hyperlink{_dealer_8cpp}{Dealer.\+cpp}}\end{DoxyCompactItemize}

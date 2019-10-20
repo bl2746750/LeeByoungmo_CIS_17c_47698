@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_hands" kind="class" language="C++" prot="public">
+    <compoundname>Hands</compoundname>
+    <basecompoundref refid="class_player" prot="public" virt="non-virtual">Player</basecompoundref>
+    <includes refid="_hands_8h" local="no">Hands.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hands_1a43954b6f5862f60f11595c0e2049117f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hands::hands</definition>
+        <argsstring></argsstring>
+        <name>hands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="21" column="9" bodyfile="Hands.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1a4b5b9521194ca29d2f7fc23f0a94a24e" prot="private" static="no" mutable="no">
+        <type>multimap&lt; int, int, greater&lt; int &gt; &gt;</type>
+        <definition>multimap&lt;int,int, greater&lt;int&gt; &gt; Hands::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="22" column="14" bodyfile="Hands.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1a5c294670327381e3cde9688c3c029e30" prot="private" static="no" mutable="no">
+        <type>map&lt; int, int, greater&lt; int &gt; &gt;</type>
+        <definition>map&lt;int,int,greater&lt;int&gt; &gt; Hands::suits</definition>
+        <argsstring></argsstring>
+        <name>suits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="23" column="9" bodyfile="Hands.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1a0a14fd6610212929ab5b107934ba2af7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hands::isStraight</definition>
+        <argsstring></argsstring>
+        <name>isStraight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="24" column="9" bodyfile="Hands.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1afd0c877d540fb025ca69bd8c9394ae21" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hands::isFlush</definition>
+        <argsstring></argsstring>
+        <name>isFlush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="25" column="9" bodyfile="Hands.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1a3855a6fc0e7d962c283054d3ba3c8cce" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hands::isPair</definition>
+        <argsstring></argsstring>
+        <name>isPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="26" column="9" bodyfile="Hands.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hands_1aab816de34934a3efe7f42cac3469e915" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hands::isStFl</definition>
+        <argsstring></argsstring>
+        <name>isStFl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="27" column="9" bodyfile="Hands.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hands_1ad9994df26939755621140b7909f73e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hands::Hands</definition>
+        <argsstring>()</argsstring>
+        <name>Hands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="31" column="5" bodyfile="Hands.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1a1eed40720a4dbe98641d42e986eae182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hands::Hands</definition>
+        <argsstring>(const Hands &amp;orig)</argsstring>
+        <name>Hands</name>
+        <param>
+          <type>const <ref refid="class_hands" kindref="compound">Hands</ref> &amp;</type>
+          <declname>orig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1aa64813af31666ccff14982c00fa6e07b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>virtual Hands::~Hands</definition>
+        <argsstring>()</argsstring>
+        <name>~Hands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="33" column="12" bodyfile="Hands.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1a2a9bb845e94518a4469b64d251488ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hands::setFaces</definition>
+        <argsstring>()</argsstring>
+        <name>setFaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="36" column="10" bodyfile="Hands.cpp" bodystart="187" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1a99a52463441245db7f2edaa5cf0cf5ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hands::setSuits</definition>
+        <argsstring>()</argsstring>
+        <name>setSuits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="37" column="10" bodyfile="Hands.cpp" bodystart="160" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1a39b5254ceb13ef47b15094d3998be08a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hands::checkStraight</definition>
+        <argsstring>()</argsstring>
+        <name>checkStraight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="38" column="10" bodyfile="Hands.cpp" bodystart="68" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1ad4ef1791cb28ac1457f3843b684b9c31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>multimap&lt; int, int, greater&lt; int &gt; &gt;</type>
+        <definition>multimap&lt;int,int,greater&lt;int&gt; &gt; Hands::getFaces</definition>
+        <argsstring>()</argsstring>
+        <name>getFaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="39" column="14" bodyfile="Hands.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1a7d296719a32757cba0ce912473a709fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>map&lt; int, int, greater&lt; int &gt; &gt;</type>
+        <definition>map&lt;int,int,greater&lt;int&gt; &gt; Hands::getSuits</definition>
+        <argsstring>()</argsstring>
+        <name>getSuits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="40" column="9" bodyfile="Hands.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hands_1ac30003e8e998bdeb41f908e1cc95e584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hands::getHands</definition>
+        <argsstring>()</argsstring>
+        <name>getHands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Hands.h" line="41" column="9" bodyfile="Hands.cpp" bodystart="23" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Player</label>
+        <link refid="class_player"/>
+      </node>
+      <node id="1">
+        <label>Hands</label>
+        <link refid="class_hands"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Player</label>
+        <link refid="class_player"/>
+      </node>
+      <node id="1">
+        <label>Hands</label>
+        <link refid="class_hands"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Hands.h" line="19" column="26" bodyfile="Hands.h" bodystart="19" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_player_1ab81470fa3ac615ce385dea56f0f165aa" prot="public" virt="non-virtual"><scope>Hands</scope><name>addMyCards</name></member>
+      <member refid="class_player_1ae0004d5df21e13f61b795d1c175e873d" prot="public" virt="non-virtual"><scope>Hands</scope><name>bet</name></member>
+      <member refid="class_hands_1a39b5254ceb13ef47b15094d3998be08a" prot="public" virt="non-virtual"><scope>Hands</scope><name>checkStraight</name></member>
+      <member refid="class_hands_1a4b5b9521194ca29d2f7fc23f0a94a24e" prot="private" virt="non-virtual"><scope>Hands</scope><name>faces</name></member>
+      <member refid="class_player_1ae3e114df5d876649096cdaa67084c7d4" prot="public" virt="non-virtual"><scope>Hands</scope><name>getActStatus</name></member>
+      <member refid="class_player_1acc01dcfa07d6244c64fb5f4e2258edac" prot="public" virt="non-virtual"><scope>Hands</scope><name>getBalance</name></member>
+      <member refid="class_hands_1ad4ef1791cb28ac1457f3843b684b9c31" prot="public" virt="non-virtual"><scope>Hands</scope><name>getFaces</name></member>
+      <member refid="class_hands_1ac30003e8e998bdeb41f908e1cc95e584" prot="public" virt="non-virtual"><scope>Hands</scope><name>getHands</name></member>
+      <member refid="class_player_1a9afc0a5766859c6c08f5875aaf4d2e19" prot="public" virt="non-virtual"><scope>Hands</scope><name>getMyCards</name></member>
+      <member refid="class_player_1a4939193fc637f75bf7a11118334dae7e" prot="public" virt="non-virtual"><scope>Hands</scope><name>getName</name></member>
+      <member refid="class_player_1ac6d917f2bae9ceaa14dd1ff3d8f09e8b" prot="public" virt="non-virtual"><scope>Hands</scope><name>getPlayerAct</name></member>
+      <member refid="class_hands_1a7d296719a32757cba0ce912473a709fa" prot="public" virt="non-virtual"><scope>Hands</scope><name>getSuits</name></member>
+      <member refid="class_hands_1ad9994df26939755621140b7909f73e55" prot="public" virt="non-virtual"><scope>Hands</scope><name>Hands</name></member>
+      <member refid="class_hands_1a1eed40720a4dbe98641d42e986eae182" prot="public" virt="non-virtual"><scope>Hands</scope><name>Hands</name></member>
+      <member refid="class_hands_1a43954b6f5862f60f11595c0e2049117f" prot="private" virt="non-virtual"><scope>Hands</scope><name>hands</name></member>
+      <member refid="class_hands_1afd0c877d540fb025ca69bd8c9394ae21" prot="private" virt="non-virtual"><scope>Hands</scope><name>isFlush</name></member>
+      <member refid="class_hands_1a3855a6fc0e7d962c283054d3ba3c8cce" prot="private" virt="non-virtual"><scope>Hands</scope><name>isPair</name></member>
+      <member refid="class_hands_1aab816de34934a3efe7f42cac3469e915" prot="private" virt="non-virtual"><scope>Hands</scope><name>isStFl</name></member>
+      <member refid="class_hands_1a0a14fd6610212929ab5b107934ba2af7" prot="private" virt="non-virtual"><scope>Hands</scope><name>isStraight</name></member>
+      <member refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" prot="public" virt="non-virtual"><scope>Hands</scope><name>Player</name></member>
+      <member refid="class_player_1a466b3100d4cb10437f9cd005b17b883d" prot="public" virt="non-virtual"><scope>Hands</scope><name>putInThePot</name></member>
+      <member refid="class_hands_1a2a9bb845e94518a4469b64d251488ddf" prot="public" virt="non-virtual"><scope>Hands</scope><name>setFaces</name></member>
+      <member refid="class_player_1a3342602d48108d9f84ef5748fd9d451b" prot="public" virt="non-virtual"><scope>Hands</scope><name>setInThePot</name></member>
+      <member refid="class_player_1a96e78179d5f063c33bb6fcfd2de4744b" prot="public" virt="non-virtual"><scope>Hands</scope><name>setPlayerAct</name></member>
+      <member refid="class_player_1aac718044215a02c2443bb7bab45969a7" prot="public" virt="non-virtual"><scope>Hands</scope><name>setPlayerBal</name></member>
+      <member refid="class_player_1a27f91c6508c046e5bece49e072458d5a" prot="public" virt="non-virtual"><scope>Hands</scope><name>setPlayerInact</name></member>
+      <member refid="class_player_1a3b3f48d066697efec9eed1075c7b7ec1" prot="public" virt="non-virtual"><scope>Hands</scope><name>setPlayerName</name></member>
+      <member refid="class_hands_1a99a52463441245db7f2edaa5cf0cf5ee" prot="public" virt="non-virtual"><scope>Hands</scope><name>setSuits</name></member>
+      <member refid="class_hands_1a5c294670327381e3cde9688c3c029e30" prot="private" virt="non-virtual"><scope>Hands</scope><name>suits</name></member>
+      <member refid="class_hands_1aa64813af31666ccff14982c00fa6e07b" prot="public" virt="non-virtual"><scope>Hands</scope><name>~Hands</name></member>
+      <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" virt="non-virtual"><scope>Hands</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

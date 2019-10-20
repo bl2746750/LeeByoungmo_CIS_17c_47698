@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_dealer" kind="class" language="C++" prot="public">
+    <compoundname>Dealer</compoundname>
+    <includes refid="_dealer_8h" local="no">Dealer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dealer_1a2c6a8e75da6a3f69afcd678663ffddc9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::potAmount</definition>
+        <argsstring></argsstring>
+        <name>potAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="19" column="9" bodyfile="Dealer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1ace567cc4f5ee79ae559bb0f230ffe8a6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::initialContributeAmount</definition>
+        <argsstring></argsstring>
+        <name>initialContributeAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="20" column="9" bodyfile="Dealer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1ac175fe9b177926d83a9b5643c1988dbc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::nRound</definition>
+        <argsstring></argsstring>
+        <name>nRound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="21" column="9" bodyfile="Dealer.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1ac7386f936f8992790958a0ec2c2664c0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::numPlayers</definition>
+        <argsstring></argsstring>
+        <name>numPlayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="22" column="9" bodyfile="Dealer.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1afd8dca424952ca51161dd80747d48fe2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::bigBlind</definition>
+        <argsstring></argsstring>
+        <name>bigBlind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="23" column="9" bodyfile="Dealer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1a3cc4429f7803faaaf2c4e496b99b2288" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dealer::smallBlind</definition>
+        <argsstring></argsstring>
+        <name>smallBlind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="24" column="9" bodyfile="Dealer.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1a8b6377ce189a93666129a830457dcaf9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_hands" kindref="compound">Hands</ref> *</type>
+        <definition>Hands* Dealer::players</definition>
+        <argsstring></argsstring>
+        <name>players</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="25" column="11" bodyfile="Dealer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dealer_1a619e0a1510c6730f43b579c8fa780379" prot="private" static="no" mutable="no">
+        <type><ref refid="class_card" kindref="compound">Card</ref> *</type>
+        <definition>Card* Dealer::deck[52]</definition>
+        <argsstring>[52]</argsstring>
+        <name>deck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="26" column="10" bodyfile="Dealer.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_dealer_1ad1f5f5392f06bb4ec783ecdf1315ced6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::DeckOfCards</definition>
+        <argsstring>()</argsstring>
+        <name>DeckOfCards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="27" column="10" bodyfile="Dealer.cpp" bodystart="139" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dealer_1a6a28be2beee1c559e202fb5b84b069cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dealer::Dealer</definition>
+        <argsstring>(int num)</argsstring>
+        <name>Dealer</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="32" column="5" bodyfile="Dealer.cpp" bodystart="14" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a8320886a9414610ab1de1bd03de0e216" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dealer::~Dealer</definition>
+        <argsstring>()</argsstring>
+        <name>~Dealer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="33" column="5" bodyfile="Dealer.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1af7745ad18bca2338902d799a48dbceaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::shuffle</definition>
+        <argsstring>()</argsstring>
+        <name>shuffle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="34" column="10" bodyfile="Dealer.cpp" bodystart="148" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ae51e030cc5764054919dcd617137c666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setPlayers</definition>
+        <argsstring>(int num)</argsstring>
+        <name>setPlayers</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="35" column="10" bodyfile="Dealer.cpp" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1af667f16ab5497049b658e4cc2292b54f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setCards</definition>
+        <argsstring>()</argsstring>
+        <name>setCards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="36" column="10" bodyfile="Dealer.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a927adeec90b346f9f1f95d576d2f93a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setBlind</definition>
+        <argsstring>()</argsstring>
+        <name>setBlind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="37" column="10" bodyfile="Dealer.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1adff52a7dfccbf3a54386d643c597f2f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getBigBlind</definition>
+        <argsstring>()</argsstring>
+        <name>getBigBlind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="38" column="9" bodyfile="Dealer.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a7d2357e4cc841d02326ae907cb58feee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getSmallBlind</definition>
+        <argsstring>()</argsstring>
+        <name>getSmallBlind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="39" column="9" bodyfile="Dealer.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ab787429e742bd5912877cfd819bd4836" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setRound</definition>
+        <argsstring>()</argsstring>
+        <name>setRound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="41" column="10" bodyfile="Dealer.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a5e7bfb3b1f07b8467c35a4c24c83a3ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::preflop</definition>
+        <argsstring>()</argsstring>
+        <name>preflop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="45" column="10" bodyfile="Dealer.cpp" bodystart="162" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1abe884b0554633cedbe274ea984d33698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::flop</definition>
+        <argsstring>()</argsstring>
+        <name>flop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="46" column="10" bodyfile="Dealer.cpp" bodystart="179" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ad6c6cb0cd29eca7c9214abe03b2847b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::turn</definition>
+        <argsstring>()</argsstring>
+        <name>turn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="47" column="10" bodyfile="Dealer.cpp" bodystart="192" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1acf739a53c9aca1923170593e7690d6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::river</definition>
+        <argsstring>()</argsstring>
+        <name>river</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="48" column="10" bodyfile="Dealer.cpp" bodystart="205" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a28db7d73628ba96519c9d662aa33322e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getRound</definition>
+        <argsstring>() const</argsstring>
+        <name>getRound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="51" column="9" bodyfile="Dealer.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a186f9e63cd1afbcce64769eb0a306e0e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_hands" kindref="compound">Hands</ref> *</type>
+        <definition>Hands* Dealer::getPlayers</definition>
+        <argsstring>() const</argsstring>
+        <name>getPlayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="52" column="11" bodyfile="Dealer.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a4b61ef775b6125cbbc01811b822025ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_card" kindref="compound">Card</ref> **</type>
+        <definition>Card** Dealer::getDeck</definition>
+        <argsstring>()</argsstring>
+        <name>getDeck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="53" column="10" bodyfile="Dealer.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a384d6b68a1fe037a301cc595ec066358" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getNumPlayers</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumPlayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="54" column="9" bodyfile="Dealer.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a1bebb91ee3cd24a7d43c406bd5309507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::displayPlayersInfo</definition>
+        <argsstring>(int num)</argsstring>
+        <name>displayPlayersInfo</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="56" column="10" bodyfile="Dealer.cpp" bodystart="128" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ad646a4c678721411e634d167341ed54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::bettingPrompt1</definition>
+        <argsstring>()</argsstring>
+        <name>bettingPrompt1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="57" column="9" bodyfile="Dealer.cpp" bodystart="218" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a01d2345dc65f403747713f3626f47320" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setIniCont</definition>
+        <argsstring>()</argsstring>
+        <name>setIniCont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="58" column="10" bodyfile="Dealer.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1abdd50179bc4e5bcee2c5c898783cb928" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dealer::setPotAmount</definition>
+        <argsstring>()</argsstring>
+        <name>setPotAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="59" column="10" bodyfile="Dealer.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a49dd8dafec4d8590d3a5a7804c71e8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::bettingPrompt2</definition>
+        <argsstring>(int num, int amount)</argsstring>
+        <name>bettingPrompt2</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="60" column="9" bodyfile="Dealer.cpp" bodystart="273" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a8246614f999d4eb926dae7330080d3b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::bettingPrompt3</definition>
+        <argsstring>(int num, int amount)</argsstring>
+        <name>bettingPrompt3</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="61" column="9" bodyfile="Dealer.cpp" bodystart="315" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1ae891e1f75cd054bf20c9c0f1743879f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getPotAmount</definition>
+        <argsstring>()</argsstring>
+        <name>getPotAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="62" column="9" bodyfile="Dealer.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dealer_1a7bdd711a816ae8820c6ef42cd328612c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Dealer::getNumAct</definition>
+        <argsstring>()</argsstring>
+        <name>getNumAct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Dealer.h" line="63" column="9" bodyfile="Dealer.cpp" bodystart="366" bodyend="373"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Dealer.h" line="17" column="13" bodyfile="Dealer.h" bodystart="17" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_dealer_1ad646a4c678721411e634d167341ed54f" prot="public" virt="non-virtual"><scope>Dealer</scope><name>bettingPrompt1</name></member>
+      <member refid="class_dealer_1a49dd8dafec4d8590d3a5a7804c71e8c3" prot="public" virt="non-virtual"><scope>Dealer</scope><name>bettingPrompt2</name></member>
+      <member refid="class_dealer_1a8246614f999d4eb926dae7330080d3b3" prot="public" virt="non-virtual"><scope>Dealer</scope><name>bettingPrompt3</name></member>
+      <member refid="class_dealer_1afd8dca424952ca51161dd80747d48fe2" prot="private" virt="non-virtual"><scope>Dealer</scope><name>bigBlind</name></member>
+      <member refid="class_dealer_1a6a28be2beee1c559e202fb5b84b069cc" prot="public" virt="non-virtual"><scope>Dealer</scope><name>Dealer</name></member>
+      <member refid="class_dealer_1a619e0a1510c6730f43b579c8fa780379" prot="private" virt="non-virtual"><scope>Dealer</scope><name>deck</name></member>
+      <member refid="class_dealer_1ad1f5f5392f06bb4ec783ecdf1315ced6" prot="private" virt="non-virtual"><scope>Dealer</scope><name>DeckOfCards</name></member>
+      <member refid="class_dealer_1a1bebb91ee3cd24a7d43c406bd5309507" prot="public" virt="non-virtual"><scope>Dealer</scope><name>displayPlayersInfo</name></member>
+      <member refid="class_dealer_1abe884b0554633cedbe274ea984d33698" prot="public" virt="non-virtual"><scope>Dealer</scope><name>flop</name></member>
+      <member refid="class_dealer_1adff52a7dfccbf3a54386d643c597f2f3" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getBigBlind</name></member>
+      <member refid="class_dealer_1a4b61ef775b6125cbbc01811b822025ec" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getDeck</name></member>
+      <member refid="class_dealer_1a7bdd711a816ae8820c6ef42cd328612c" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getNumAct</name></member>
+      <member refid="class_dealer_1a384d6b68a1fe037a301cc595ec066358" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getNumPlayers</name></member>
+      <member refid="class_dealer_1a186f9e63cd1afbcce64769eb0a306e0e" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getPlayers</name></member>
+      <member refid="class_dealer_1ae891e1f75cd054bf20c9c0f1743879f4" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getPotAmount</name></member>
+      <member refid="class_dealer_1a28db7d73628ba96519c9d662aa33322e" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getRound</name></member>
+      <member refid="class_dealer_1a7d2357e4cc841d02326ae907cb58feee" prot="public" virt="non-virtual"><scope>Dealer</scope><name>getSmallBlind</name></member>
+      <member refid="class_dealer_1ace567cc4f5ee79ae559bb0f230ffe8a6" prot="private" virt="non-virtual"><scope>Dealer</scope><name>initialContributeAmount</name></member>
+      <member refid="class_dealer_1ac175fe9b177926d83a9b5643c1988dbc" prot="private" virt="non-virtual"><scope>Dealer</scope><name>nRound</name></member>
+      <member refid="class_dealer_1ac7386f936f8992790958a0ec2c2664c0" prot="private" virt="non-virtual"><scope>Dealer</scope><name>numPlayers</name></member>
+      <member refid="class_dealer_1a8b6377ce189a93666129a830457dcaf9" prot="private" virt="non-virtual"><scope>Dealer</scope><name>players</name></member>
+      <member refid="class_dealer_1a2c6a8e75da6a3f69afcd678663ffddc9" prot="private" virt="non-virtual"><scope>Dealer</scope><name>potAmount</name></member>
+      <member refid="class_dealer_1a5e7bfb3b1f07b8467c35a4c24c83a3ef" prot="public" virt="non-virtual"><scope>Dealer</scope><name>preflop</name></member>
+      <member refid="class_dealer_1acf739a53c9aca1923170593e7690d6cc" prot="public" virt="non-virtual"><scope>Dealer</scope><name>river</name></member>
+      <member refid="class_dealer_1a927adeec90b346f9f1f95d576d2f93a1" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setBlind</name></member>
+      <member refid="class_dealer_1af667f16ab5497049b658e4cc2292b54f" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setCards</name></member>
+      <member refid="class_dealer_1a01d2345dc65f403747713f3626f47320" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setIniCont</name></member>
+      <member refid="class_dealer_1ae51e030cc5764054919dcd617137c666" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setPlayers</name></member>
+      <member refid="class_dealer_1abdd50179bc4e5bcee2c5c898783cb928" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setPotAmount</name></member>
+      <member refid="class_dealer_1ab787429e742bd5912877cfd819bd4836" prot="public" virt="non-virtual"><scope>Dealer</scope><name>setRound</name></member>
+      <member refid="class_dealer_1af7745ad18bca2338902d799a48dbceaa" prot="public" virt="non-virtual"><scope>Dealer</scope><name>shuffle</name></member>
+      <member refid="class_dealer_1a3cc4429f7803faaaf2c4e496b99b2288" prot="private" virt="non-virtual"><scope>Dealer</scope><name>smallBlind</name></member>
+      <member refid="class_dealer_1ad6c6cb0cd29eca7c9214abe03b2847b7" prot="public" virt="non-virtual"><scope>Dealer</scope><name>turn</name></member>
+      <member refid="class_dealer_1a8320886a9414610ab1de1bd03de0e216" prot="public" virt="non-virtual"><scope>Dealer</scope><name>~Dealer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
