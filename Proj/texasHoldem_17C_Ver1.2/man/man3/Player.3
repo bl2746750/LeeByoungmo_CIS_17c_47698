@@ -1,0 +1,132 @@
+.TH "Player" 3 "Sun Oct 20 2019" "texasHoldem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Player
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Player\&.h>\fP
+.PP
+Inherited by \fBHands\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP ()"
+.br
+.ti -1c
+.RI "\fB~Player\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPlayerName\fP (string name)"
+.br
+.ti -1c
+.RI "void \fBsetPlayerBal\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddMyCards\fP (\fBCard\fP card)"
+.br
+.ti -1c
+.RI "void \fBsetPlayerAct\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetName\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetBalance\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetPlayerAct\fP ()"
+.br
+.ti -1c
+.RI "list< \fBCard\fP > \fBgetMyCards\fP ()"
+.br
+.ti -1c
+.RI "void \fBbet\fP (int amount)"
+.br
+.ti -1c
+.RI "void \fBsetPlayerInact\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInThePot\fP ()"
+.br
+.ti -1c
+.RI "int \fBputInThePot\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgetActStatus\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 20 of file Player\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Player::Player ()"
+
+.PP
+Definition at line 11 of file Player\&.cpp\&.
+.SS "Player::~Player ()\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file Player\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Player::addMyCards (\fBCard\fP card)"
+
+.PP
+Definition at line 17 of file Player\&.cpp\&.
+.SS "void Player::bet (int amount)\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file Player\&.h\&.
+.SS "bool Player::getActStatus ()\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file Player\&.h\&.
+.SS "int Player::getBalance () const\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Player\&.h\&.
+.SS "list<\fBCard\fP> Player::getMyCards ()\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file Player\&.h\&.
+.SS "string Player::getName () const\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file Player\&.h\&.
+.SS "int Player::getPlayerAct ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file Player\&.h\&.
+.SS "int Player::putInThePot ()\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file Player\&.h\&.
+.SS "void Player::setInThePot ()\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file Player\&.h\&.
+.SS "void Player::setPlayerAct ()\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file Player\&.h\&.
+.SS "void Player::setPlayerBal ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file Player\&.h\&.
+.SS "void Player::setPlayerInact ()\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file Player\&.h\&.
+.SS "void Player::setPlayerName (string name)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file Player\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for texasHoldem from the source code\&.
