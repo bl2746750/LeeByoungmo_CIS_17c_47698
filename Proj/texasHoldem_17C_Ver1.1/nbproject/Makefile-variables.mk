@@ -9,11 +9,11 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=texasholdem_17c_ver1.0
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/texasholdem_17c_ver1.0
+CND_ARTIFACT_NAME_Debug=texasholdem_17c_ver1.1
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/texasholdem_17c_ver1.1
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=texasholdem17cver1.0.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/texasholdem17cver1.0.tar
+CND_PACKAGE_NAME_Debug=texasholdem17cver1.1.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/texasholdem17cver1.1.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
