@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>texasHoldem: Player.h Source File</title>
+<title>My Project: Player.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">texasHoldem
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -108,13 +108,16 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_player.html#a3342602d48108d9f84ef5748fd9d451b">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a3342602d48108d9f84ef5748fd9d451b">setInThePot</a>() {this-&gt;inThePot=0;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_player.html#a466b3100d4cb10437f9cd005b17b883d">   42</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a466b3100d4cb10437f9cd005b17b883d">putInThePot</a>() {<span class="keywordflow">return</span> this-&gt;inThePot;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_player.html#ae3e114df5d876649096cdaa67084c7d4">   43</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_player.html#ae3e114df5d876649096cdaa67084c7d4">getActStatus</a>() {<span class="keywordflow">return</span> this-&gt;active;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PLAYER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_player.html#ae184782423c411745935b43912d73e95">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#ae184782423c411745935b43912d73e95">addBal</a>(<span class="keywordtype">int</span> pot) {this-&gt;balance += pot;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_player.html#a22e8cf764930dfdcf63f442d582767ae">   45</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a22e8cf764930dfdcf63f442d582767ae">resetMyCards</a>() {this-&gt;myCards.clear();}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PLAYER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_player_html_a22e8cf764930dfdcf63f442d582767ae"><div class="ttname"><a href="class_player.html#a22e8cf764930dfdcf63f442d582767ae">Player::resetMyCards</a></div><div class="ttdeci">void resetMyCards()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00045">Player.h:45</a></div></div>
 <div class="ttc" id="aclass_player_html_a3342602d48108d9f84ef5748fd9d451b"><div class="ttname"><a href="class_player.html#a3342602d48108d9f84ef5748fd9d451b">Player::setInThePot</a></div><div class="ttdeci">void setInThePot()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00041">Player.h:41</a></div></div>
 <div class="ttc" id="aclass_player_html_acc01dcfa07d6244c64fb5f4e2258edac"><div class="ttname"><a href="class_player.html#acc01dcfa07d6244c64fb5f4e2258edac">Player::getBalance</a></div><div class="ttdeci">int getBalance() const</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00036">Player.h:36</a></div></div>
 <div class="ttc" id="aclass_player_html_aac718044215a02c2443bb7bab45969a7"><div class="ttname"><a href="class_player.html#aac718044215a02c2443bb7bab45969a7">Player::setPlayerBal</a></div><div class="ttdeci">void setPlayerBal()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00032">Player.h:32</a></div></div>
@@ -128,6 +131,7 @@ $(function() {
 <div class="ttc" id="aclass_player_html_ac6d917f2bae9ceaa14dd1ff3d8f09e8b"><div class="ttname"><a href="class_player.html#ac6d917f2bae9ceaa14dd1ff3d8f09e8b">Player::getPlayerAct</a></div><div class="ttdeci">int getPlayerAct()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00037">Player.h:37</a></div></div>
 <div class="ttc" id="aclass_player_html_a27f91c6508c046e5bece49e072458d5a"><div class="ttname"><a href="class_player.html#a27f91c6508c046e5bece49e072458d5a">Player::setPlayerInact</a></div><div class="ttdeci">void setPlayerInact()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00040">Player.h:40</a></div></div>
 <div class="ttc" id="aclass_player_html_ae0004d5df21e13f61b795d1c175e873d"><div class="ttname"><a href="class_player.html#ae0004d5df21e13f61b795d1c175e873d">Player::bet</a></div><div class="ttdeci">void bet(int amount)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00039">Player.h:39</a></div></div>
+<div class="ttc" id="aclass_player_html_ae184782423c411745935b43912d73e95"><div class="ttname"><a href="class_player.html#ae184782423c411745935b43912d73e95">Player::addBal</a></div><div class="ttdeci">void addBal(int pot)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00044">Player.h:44</a></div></div>
 <div class="ttc" id="a_card_8h_html"><div class="ttname"><a href="_card_8h.html">Card.h</a></div></div>
 <div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00030">Player.h:30</a></div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8h_source.html#l00020">Player.h:20</a></div></div>

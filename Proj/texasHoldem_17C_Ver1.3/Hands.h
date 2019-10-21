@@ -42,7 +42,7 @@ public:
     int getHands();
     string getHandsName();
     void resetHands(){
-        this->resetMyCards();
+        this->Player::resetMyCards();
         this->faces.clear();
         this->suits.clear();
         this->hands=0;
@@ -52,6 +52,7 @@ public:
         this->isPair=0;
         this->isStFl=0;
     }
+    
 };    
 
 #endif /* HANDS_H */

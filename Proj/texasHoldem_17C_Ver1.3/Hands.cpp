@@ -111,6 +111,7 @@ void Hands::checkStraight(){
         }
     }
     if(cnt==3&&*it+3==5) {this->isStraight=14;}
+    faceSet.clear();
 }
 
 
@@ -139,7 +140,7 @@ void Hands::setSuits(){
 //        
 //    cout << endl;
     
-    
+    suitSet.clear();
 }
 void Hands::setFaces(){
     this->isPair=0;
@@ -182,5 +183,5 @@ void Hands::setFaces(){
     
     
 //    cout << "isPair: " << this->isPair << endl;
-    
+    faceSet.clear();
 }

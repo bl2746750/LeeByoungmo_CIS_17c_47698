@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['_7edealer_147',['~Dealer',['../class_dealer.html#a8320886a9414610ab1de1bd03de0e216',1,'Dealer']]],
-  ['_7ehands_148',['~Hands',['../class_hands.html#aa64813af31666ccff14982c00fa6e07b',1,'Hands']]],
-  ['_7eplayer_149',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]]
+  ['test1_179',['test1',['../newsimpletest_8cpp.html#a1440a7779ac56f47a3f355ce4a8c7da0',1,'newsimpletest.cpp']]],
+  ['test2_180',['test2',['../newsimpletest_8cpp.html#a0283886819c7c140a023582b7269e2d0',1,'newsimpletest.cpp']]],
+  ['tostring_181',['toString',['../class_card.html#aa12daee2e789c2f0be3feff4f25df888',1,'Card']]],
+  ['turn_182',['turn',['../class_dealer.html#ad6c6cb0cd29eca7c9214abe03b2847b7',1,'Dealer']]]
 ];

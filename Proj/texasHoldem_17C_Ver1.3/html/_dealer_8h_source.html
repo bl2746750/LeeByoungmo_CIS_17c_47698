@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>texasHoldem: Dealer.h Source File</title>
+<title>My Project: Dealer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">texasHoldem
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -122,33 +122,40 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//void displayCards(Card* cards);</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> displayPlayersInfo(<span class="keywordtype">int</span> num);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> bettingPrompt1();</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_dealer.html#a01d2345dc65f403747713f3626f47320">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_dealer.html#a01d2345dc65f403747713f3626f47320">setIniCont</a>() {this-&gt;initialContributeAmount=50;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_dealer.html#abdd50179bc4e5bcee2c5c898783cb928">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_dealer.html#abdd50179bc4e5bcee2c5c898783cb928">setPotAmount</a>() {this-&gt;potAmount=0;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> bettingPrompt2(<span class="keywordtype">int</span> num, <span class="keywordtype">int</span> amount);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> bettingPrompt3(<span class="keywordtype">int</span> num, <span class="keywordtype">int</span> amount);</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">getPotAmount</a>() {<span class="keywordflow">return</span> this-&gt;potAmount;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> getNumAct();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//int Dealer::round=0;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEALER_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_dealer.html#a4668bf10f9c97c6753cb5ea8a4027a81">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_dealer.html#a4668bf10f9c97c6753cb5ea8a4027a81">setIniCont</a>(<span class="keywordtype">int</span> num) {this-&gt;initialContributeAmount=num;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> bettingPrompt2(<span class="keywordtype">int</span> num, <span class="keywordtype">int</span> amount);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> bettingPrompt3(<span class="keywordtype">int</span> num, <span class="keywordtype">int</span> amount);</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">   61</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">getPotAmount</a>() {<span class="keywordflow">return</span> this-&gt;potAmount;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> getNumAct();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> decideWinner();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> calBal();</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_dealer.html#adf3cd5d21ced441f86e0fa7662ffd72a">   65</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_dealer.html#adf3cd5d21ced441f86e0fa7662ffd72a">resetPot</a>(){this-&gt;potAmount=0;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> resetGame();</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_dealer.html#adf43d1121657e776719752b9e5aa3d5d">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_dealer.html#adf43d1121657e776719752b9e5aa3d5d">nextRound</a>() {this-&gt;nRound++;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_dealer.html#a56d697697ee01b371322c94db26ca3bf">   68</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_dealer.html#a56d697697ee01b371322c94db26ca3bf">getRound</a>() {<span class="keywordflow">return</span> this-&gt;nRound;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//int Dealer::round=0;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEALER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dealer_html_adf43d1121657e776719752b9e5aa3d5d"><div class="ttname"><a href="class_dealer.html#adf43d1121657e776719752b9e5aa3d5d">Dealer::nextRound</a></div><div class="ttdeci">void nextRound()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00067">Dealer.h:67</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a4b61ef775b6125cbbc01811b822025ec"><div class="ttname"><a href="class_dealer.html#a4b61ef775b6125cbbc01811b822025ec">Dealer::getDeck</a></div><div class="ttdeci">Card ** getDeck()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00053">Dealer.h:53</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a384d6b68a1fe037a301cc595ec066358"><div class="ttname"><a href="class_dealer.html#a384d6b68a1fe037a301cc595ec066358">Dealer::getNumPlayers</a></div><div class="ttdeci">int getNumPlayers() const</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00054">Dealer.h:54</a></div></div>
-<div class="ttc" id="aclass_dealer_html_ae891e1f75cd054bf20c9c0f1743879f4"><div class="ttname"><a href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">Dealer::getPotAmount</a></div><div class="ttdeci">int getPotAmount()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00062">Dealer.h:62</a></div></div>
-<div class="ttc" id="aclass_dealer_html_a01d2345dc65f403747713f3626f47320"><div class="ttname"><a href="class_dealer.html#a01d2345dc65f403747713f3626f47320">Dealer::setIniCont</a></div><div class="ttdeci">void setIniCont()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00058">Dealer.h:58</a></div></div>
+<div class="ttc" id="aclass_dealer_html_ae891e1f75cd054bf20c9c0f1743879f4"><div class="ttname"><a href="class_dealer.html#ae891e1f75cd054bf20c9c0f1743879f4">Dealer::getPotAmount</a></div><div class="ttdeci">int getPotAmount()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00061">Dealer.h:61</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a7d2357e4cc841d02326ae907cb58feee"><div class="ttname"><a href="class_dealer.html#a7d2357e4cc841d02326ae907cb58feee">Dealer::getSmallBlind</a></div><div class="ttdeci">int getSmallBlind()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00039">Dealer.h:39</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a8320886a9414610ab1de1bd03de0e216"><div class="ttname"><a href="class_dealer.html#a8320886a9414610ab1de1bd03de0e216">Dealer::~Dealer</a></div><div class="ttdeci">~Dealer()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00033">Dealer.h:33</a></div></div>
 <div class="ttc" id="aclass_dealer_html_adff52a7dfccbf3a54386d643c597f2f3"><div class="ttname"><a href="class_dealer.html#adff52a7dfccbf3a54386d643c597f2f3">Dealer::getBigBlind</a></div><div class="ttdeci">int getBigBlind()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00038">Dealer.h:38</a></div></div>
 <div class="ttc" id="aclass_card_html"><div class="ttname"><a href="class_card.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="_card_8h_source.html#l00015">Card.h:15</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a186f9e63cd1afbcce64769eb0a306e0e"><div class="ttname"><a href="class_dealer.html#a186f9e63cd1afbcce64769eb0a306e0e">Dealer::getPlayers</a></div><div class="ttdeci">Hands * getPlayers() const</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00052">Dealer.h:52</a></div></div>
+<div class="ttc" id="aclass_dealer_html_adf3cd5d21ced441f86e0fa7662ffd72a"><div class="ttname"><a href="class_dealer.html#adf3cd5d21ced441f86e0fa7662ffd72a">Dealer::resetPot</a></div><div class="ttdeci">void resetPot()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00065">Dealer.h:65</a></div></div>
 <div class="ttc" id="aclass_dealer_html"><div class="ttname"><a href="class_dealer.html">Dealer</a></div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00017">Dealer.h:17</a></div></div>
 <div class="ttc" id="aclass_dealer_html_af667f16ab5497049b658e4cc2292b54f"><div class="ttname"><a href="class_dealer.html#af667f16ab5497049b658e4cc2292b54f">Dealer::setCards</a></div><div class="ttdeci">void setCards()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00036">Dealer.h:36</a></div></div>
 <div class="ttc" id="aclass_hands_html"><div class="ttname"><a href="class_hands.html">Hands</a></div><div class="ttdef"><b>Definition:</b> <a href="_hands_8h_source.html#l00019">Hands.h:19</a></div></div>
+<div class="ttc" id="aclass_dealer_html_a4668bf10f9c97c6753cb5ea8a4027a81"><div class="ttname"><a href="class_dealer.html#a4668bf10f9c97c6753cb5ea8a4027a81">Dealer::setIniCont</a></div><div class="ttdeci">void setIniCont(int num)</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00058">Dealer.h:58</a></div></div>
 <div class="ttc" id="aclass_dealer_html_a28db7d73628ba96519c9d662aa33322e"><div class="ttname"><a href="class_dealer.html#a28db7d73628ba96519c9d662aa33322e">Dealer::getRound</a></div><div class="ttdeci">int getRound() const</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00051">Dealer.h:51</a></div></div>
-<div class="ttc" id="aclass_dealer_html_abdd50179bc4e5bcee2c5c898783cb928"><div class="ttname"><a href="class_dealer.html#abdd50179bc4e5bcee2c5c898783cb928">Dealer::setPotAmount</a></div><div class="ttdeci">void setPotAmount()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00059">Dealer.h:59</a></div></div>
+<div class="ttc" id="aclass_dealer_html_a56d697697ee01b371322c94db26ca3bf"><div class="ttname"><a href="class_dealer.html#a56d697697ee01b371322c94db26ca3bf">Dealer::getRound</a></div><div class="ttdeci">int getRound()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00068">Dealer.h:68</a></div></div>
 <div class="ttc" id="a_hands_8h_html"><div class="ttname"><a href="_hands_8h.html">Hands.h</a></div></div>
 <div class="ttc" id="aclass_dealer_html_ab787429e742bd5912877cfd819bd4836"><div class="ttname"><a href="class_dealer.html#ab787429e742bd5912877cfd819bd4836">Dealer::setRound</a></div><div class="ttdeci">void setRound()</div><div class="ttdef"><b>Definition:</b> <a href="_dealer_8h_source.html#l00041">Dealer.h:41</a></div></div>
 <!-- start footer part -->
