@@ -118,7 +118,7 @@ Dealer::Dealer(int num){
     }while(menu!=0);
     
     delete [] players;
-    delete [] deck;
+    
 }
 
 
