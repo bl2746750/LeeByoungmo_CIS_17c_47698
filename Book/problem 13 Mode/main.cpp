@@ -30,8 +30,8 @@ int *copy(const int *,int);
 int main(int argc, char*argv[]) {
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables and fill
-    int arySize=200;
-    int modNum=50;
+    int arySize=50;
+    int modNum=12;
     int *ary=fillAry(arySize,modNum);
     
     //Print the initial array

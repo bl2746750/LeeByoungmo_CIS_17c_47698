@@ -26,17 +26,17 @@ int main(int argc, char** argv) {
     float x=30.5;
     double y=0.5;
     double z=PI/4;
-    int n=2;
+    int n=5;
     
     //Initialize Variables
     
     //Process inputs to outputs/map and Display
         
     //Output 
-    cout << prob10(x,n) << endl;
-    cout << prob11(y) << endl;
-    cout << prob12_C(z) << endl;
-    cout << prob12_S(z) << endl;
+    cout << "Problem10: (1) x=30.5, n=5 (2) x^n= " << prob10(x,n) << endl;
+    cout << "Problem11: (1) x=0.5 (2) g(x)= " << prob11(y) << endl;
+    cout << "Problem12: (1) x=PI/4 (2) C(x)= " << prob12_C(z);
+    cout << ", S(x)= " << prob12_S(z) << endl;
     //Clean up and exit stage right
     return 0;
 }

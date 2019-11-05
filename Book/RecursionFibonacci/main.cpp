@@ -35,12 +35,12 @@ int main(int argc, char** argv) {
     cout<<" N   Recursive     Swap/Replace         Array"<<endl;
             
     for(int i=0;i<=nLoop;i++){
-        cout<<setw(2)<<i;
-        cout<<setw(12)<<fiboRec(i) << " " << numCall0 << " " << numCall1 
-                << " " << numCall0+numCall1 << " " << numCall << " " << 
-                numCall0+numCall1-numCall <<endl;
+//        cout<<setw(2)<<i;
+        cout<<setw(12)<<fiboRec(i) << "!" << numCall0 << "!" 
+                <<numCall1<< "!" << numCall0+numCall1+numCall << " " <<endl;
 //        cout<<setw(17)<<fiboRpl(i);
 //        cout<<setw(14)<<fiboAry(i)<<endl;
+        numCall0=0;numCall1=0;numCall=0;
     }
     
     //Display the results
@@ -86,6 +86,6 @@ float fiboRec(int n){
         numCall1++;
         return 1;
     }
-    numCall++;
+//    numCall+=2;
     return fiboRec(n-1)+fiboRec(n-2);
 }

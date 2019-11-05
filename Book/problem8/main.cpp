@@ -16,30 +16,8 @@ using namespace std;
 //Global Constants
 
 //Function Prototypes
-int roll_a_fair_die( )
-{
-     static std::default_random_engine e{};
-     static std::uniform_int_distribution<int> d{1, 6};
-     return d(e);
-}
-
-int checkPair(int array[], int size){
-    int isPair=0;
-    multiset<int> faceSet;
-    for(int i=0;i<size;i++){
-        faceSet.insert(array[i]);
-    }
-    
-    for(int i=1;i<=6;i++){
-        if(faceSet.count(i)==2) isPair++;
-        else if(faceSet.count(i)==3) isPair=3;
-        else if(faceSet.count(i)==4) isPair=4;
-    }
-    
-    faceSet.clear();
-    
-    return isPair;
-}
+int roll_a_fair_die( );
+int checkPair(int [], int);
 //Execution Begins Here
 int main(int argc, char** argv) {
     
@@ -84,4 +62,29 @@ int main(int argc, char** argv) {
             "     " << 6.0/1296*100 <<endl;
     //Clean up and exit stage right
     return 0;
+}
+
+int roll_a_fair_die( )
+{
+     static std::default_random_engine e{};
+     static std::uniform_int_distribution<int> d{1, 6};
+     return d(e);
+}
+
+int checkPair(int array[], int size){
+    int isPair=0;
+    multiset<int> faceSet;
+    for(int i=0;i<size;i++){
+        faceSet.insert(array[i]);
+    }
+    
+    for(int i=1;i<=6;i++){
+        if(faceSet.count(i)==2) isPair++;
+        else if(faceSet.count(i)==3) isPair=3;
+        else if(faceSet.count(i)==4) isPair=4;
+    }
+    
+    faceSet.clear();
+    
+    return isPair;
 }
