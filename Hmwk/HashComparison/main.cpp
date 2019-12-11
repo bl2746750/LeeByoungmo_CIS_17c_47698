@@ -95,16 +95,16 @@ string* makeSrchLST(string Lst[],int LstSize, int srchSize, int strSize){
     string* srchLst=new string [srchSize];
     for(int i=0;i<srchSize/2;i++){
         srchLst[i]=filArry(strSize);
-//        cout << srchLst[i] << endl;
+        cout << srchLst[i] << endl;
     }
     for(int i=srchSize/2;i<srchSize;i++){
         int any=rand()%(LstSize-1);
         srchLst[i]=Lst[any];
-//        cout << srchLst[i] << endl;
+        cout << srchLst[i] << endl;
     }
-//    for(int i=0;i<srchSize;i++){
-//        cout << srchLst[i] << endl;
-//    }
+    for(int i=0;i<srchSize;i++){
+        cout << srchLst[i] << endl;
+    }
     return srchLst;
 }
 
