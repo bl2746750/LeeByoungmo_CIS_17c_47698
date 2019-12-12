@@ -24,7 +24,8 @@ int main(){
     int WIN_NUM=5;
     int numWin=-1;
     float totalWait=0;
-    int line=0;
+    float arrPrd=15;
+//    int line=0;
     
     customer cust[SIZE];
     customer winClosed3,winClosed4;
@@ -41,7 +42,7 @@ int main(){
     clerk[4]=&qWin[4].front();
     
     for(int i=0;i<SIZE;i++){
-        cust[i].arrTime=15*(i+1);
+        cust[i].arrTime=arrPrd*(i+1);
         qLine.push(cust[i]);
         custBack=&qLine.back();
         custFront=&qLine.front();
@@ -61,22 +62,29 @@ int main(){
         //cout << "numWin: " << numWin << endl;
         //cout << "nth: " << i << endl;
         if(numWin!=-1) {
-            custFront->waitTime=0;
-            custFront->servTime=checkServTime(numWin);
-            custFront->totalTime=custFront->arrTime+custFront->servTime+custFront->waitTime;
-            cout << "window #: " << numWin << endl;
-            cout << "nth: " << i << endl;
-            cout << "custWin waitTime: " << custFront->waitTime << endl;
-            cout << "custWin serviceTime " << custFront->servTime << endl;
-            cout << "custWin arrival Time " << custFront->arrTime << endl;
-            cout << "custWin Total Time: " << custFront->totalTime << endl;
-            
-            qLine.pop();
-            qWin[numWin].push(*custFront);
-            clerk[numWin]=&qWin[numWin].front();
-            custFront=&qLine.front();
-            custBack=&qLine.back();
+            do{
+                custFront->waitTime=0;
+                custFront->servTime=checkServTime(numWin);
+                custFront->totalTime=custFront->arrTime+custFront->servTime+custFront->waitTime;
+                cout << "window #: " << numWin << endl;
+                cout << "nth: " << i << endl;
+                cout << "custWin waitTime: " << custFront->waitTime << endl;
+                cout << "custWin serviceTime " << custFront->servTime << endl;
+                cout << "custWin arrival Time " << custFront->arrTime << endl;
+                cout << "custWin Total Time: " << custFront->totalTime << endl;
+                totalWait+=custFront->waitTime;
+                qLine.pop();
+                qWin[numWin].push(*custFront);
+                clerk[numWin]=&qWin[numWin].front();
+                if(!qLine.empty()){
+                    custFront=&qLine.front();
+                    custBack=&qLine.back();
+                    
+                }
+                numWin=checkEmptyWin(qWin,WIN_NUM);
+            }while(numWin!=-1&&!qLine.empty());
         }
+
         else {
             
             numWin=compareWins(clerk,WIN_NUM);
@@ -87,6 +95,7 @@ int main(){
                 if(custFront->waitTime<0) custFront->waitTime=0;
                 custFront->servTime=checkServTime(numWin);
                 custFront->totalTime=custFront->arrTime+custFront->servTime+custFront->waitTime;
+                totalWait+=custFront->waitTime;
                 cout << "window #: " << numWin << endl;
                 cout << "nth: " << i << endl;
                 cout << "custWin waitTime: " << custFront->waitTime << endl;
@@ -105,10 +114,10 @@ int main(){
         }
         cout << "customers waiting in the line: "  << qLine.size() << endl;
         //if(qLine.size()>=5)  qWin[3].pop();
-        //totalWait+=cust[i].waitTime;
+        
     }
     
-    //cout << totalWait*1.0/SIZE<< endl;
+    cout << totalWait*1.0/SIZE<< endl;
     
     
     //Exit stage right!
